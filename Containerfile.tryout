@@ -1,0 +1,48 @@
+###
+### Containerfile.common - used to build ONLY NON-nvidia kmods
+###
+
+ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-40}"
+ARG KERNEL_FLAVOR="${KERNEL_FLAVOR:-main}"
+ARG KERNEL_IMAGE="${KERNEL_IMAGE:-${KERNEL_FLAVOR}-kernel}"
+ARG KERNEL_ORG="${KERNEL_ORG:-ublue-os}"
+ARG KERNEL_BASE="ghcr.io/${KERNEL_ORG}/${KERNEL_IMAGE}:${FEDORA_MAJOR_VERSION}"
+ARG BUILDER_IMAGE="${BUILDER_IMAGE:-quay.io/fedora/fedora}"
+ARG BUILDER_BASE="${BUILDER_IMAGE}:${FEDORA_MAJOR_VERSION}"
+FROM ${KERNEL_BASE} AS kernel_cache
+FROM ${BUILDER_BASE} AS builder
+
+ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-40}"
+ARG KERNEL_FLAVOR="${KERNEL_FLAVOR:-main}"
+ARG RPMFUSION_MIRROR=""
+ARG DUAL_SIGN="true"
+
+COPY build-prep.sh /tmp/
+COPY certs /tmp/certs
+
+# cached kernel rpms
+COPY --from=kernel_cache /tmp/rpms /tmp/kernel_cache
+
+# files for akmods
+COPY ublue-os-akmods-addons.spec /tmp/ublue-os-akmods-addons/ublue-os-akmods-addons.spec
+COPY ublue-os-ucore-addons.spec /tmp/ublue-os-ucore-addons/ublue-os-ucore-addons.spec
+ADD https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/repo/fedora-${FEDORA_MAJOR_VERSION}/ublue-os-akmods-fedora-${FEDORA_MAJOR_VERSION}.repo \
+    /tmp/ublue-os-akmods-addons/rpmbuild/SOURCES/_copr_ublue-os-akmods.repo
+ADD https://negativo17.org/repos/fedora-multimedia.repo \
+    /tmp/ublue-os-akmods-addons/rpmbuild/SOURCES/negativo17-fedora-multimedia.repo
+
+RUN /tmp/build-prep.sh
+
+COPY build*.sh /tmp/
+
+ARG KERNEL_NAME="kernel"
+
+RUN /tmp/build-kmod-kvmfr.sh
+
+COPY akmod-tuxedo-drivers-4.11.2-1.fc40.x86_64.rpm /tmp/
+
+COPY tuxedo-drivers-kmod-common-4.11.2-1.fc40.x86_64.rpm /tmp/
+
+RUN /tmp/build-kmod-tuxedo-drivers.sh
+
+RUN --mount=type=cache,dst=/tmp/test ls -la /var/cache/akmods/kvmfr

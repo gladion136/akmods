@@ -1,0 +1,879 @@
+
+Complete!
++ akmods --force --kernels 6.12.11-100.fc40.x86_64 --kmod zenergy
+grep: /boot/grub2/grubenv: No such file or directory
+Checking kmods exist for 6.12.11-100.fc40.x86_64 [  OK  ]
+Building and installing zenergy-kmod [  OK  ]
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko.xz
++ rm -f /etc/yum.repos.d/_copr_ublue-os-akmods.repo
+++ rpm -E %_arch
++ ARCH=x86_64
+++ rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}'
++ KERNEL=6.12.11-100.fc40.x86_64
+++ rpm -E %fedora
++ RELEASE=40
++ cp /tmp/ublue-os-akmods-addons/rpmbuild/SOURCES/negativo17-fedora-multimedia.repo /etc/yum.repos.d/
++ [[ 40 -ge 42 ]]
++ set -e pipefail
++ export 'CFLAGS=-fno-pie -no-pie'
++ CFLAGS='-fno-pie -no-pie'
++ dnf install -y 'kmod-evdi*.fc40.x86_64' 'akmod-evdi-*.fc40.x86_64'
+negativo17 - Multimedia                          34 kB/s | 4.3 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package          Arch        Version              Repository              Size
+================================================================================
+Installing:
+ akmod-evdi       x86_64      1.14.8-2.fc40        fedora-multimedia      107 k
+ kmod-evdi        x86_64      1.14.8-2.fc40        fedora-multimedia      7.4 k
+Installing dependencies:
+ displaylink      x86_64      6.1.0-2.fc40         fedora-multimedia      6.6 M
+ libevdi          x86_64      1.14.8-1.fc40        fedora-multimedia       30 k
+ libusb1          x86_64      1.0.27-6.fc40        updates                 76 k
+ logrotate        x86_64      3.21.0-6.fc40        fedora                  75 k
+
+Transaction Summary
+================================================================================
+Install  6 Packages
+
+Total download size: 6.9 M
+Installed size: 15 M
+Downloading Packages:
+(1/6): libusb1-1.0.27-6.fc40.x86_64.rpm         525 kB/s |  76 kB     00:00    
+(2/6): logrotate-3.21.0-6.fc40.x86_64.rpm       449 kB/s |  75 kB     00:00    
+(3/6): akmod-evdi-1.14.8-2.fc40.x86_64.rpm      467 kB/s | 107 kB     00:00    
+(4/6): libevdi-1.14.8-1.fc40.x86_64.rpm         991 kB/s |  30 kB     00:00    
+(5/6): kmod-evdi-1.14.8-2.fc40.x86_64.rpm        62 kB/s | 7.4 kB     00:00    
+(6/6): displaylink-6.1.0-2.fc40.x86_64.rpm       13 MB/s | 6.6 MB     00:00    
+--------------------------------------------------------------------------------
+Total                                           4.5 MB/s | 6.9 MB     00:01     
+negativo17 - Multimedia                          26 kB/s | 3.1 kB     00:00    
+Importing GPG key 0x93E8909B:
+ Userid     : "Simone Caronni (negativo17.org) <negativo17@gmail.com>"
+ Fingerprint: 0C5D 0F47 0484 AE2F C40A 9B65 97F3 0089 93E8 909B
+ From       : https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : libevdi-1.14.8-1.fc40.x86_64                           1/6 
+  Installing       : libusb1-1.0.27-6.fc40.x86_64                           2/6 
+  Running scriptlet: logrotate-3.21.0-6.fc40.x86_64                         3/6 
+  Installing       : logrotate-3.21.0-6.fc40.x86_64                         3/6 
+  Running scriptlet: logrotate-3.21.0-6.fc40.x86_64                         3/6 
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+
+  Installing       : akmod-evdi-1.14.8-2.fc40.x86_64                        4/6 
+  Running scriptlet: akmod-evdi-1.14.8-2.fc40.x86_64                        4/6 
+  Installing       : displaylink-6.1.0-2.fc40.x86_64                        5/6 
+  Running scriptlet: displaylink-6.1.0-2.fc40.x86_64                        5/6 
+Created symlink /etc/systemd/system/multi-user.target.wants/displaylink.service → /usr/lib/systemd/system/displaylink.service.
+
+  Installing       : kmod-evdi-1.14.8-2.fc40.x86_64                         6/6 
+  Running scriptlet: akmod-evdi-1.14.8-2.fc40.x86_64                        6/6 
+  Running scriptlet: kmod-evdi-1.14.8-2.fc40.x86_64                         6/6 
+
+Installed:
+  akmod-evdi-1.14.8-2.fc40.x86_64        displaylink-6.1.0-2.fc40.x86_64       
+  kmod-evdi-1.14.8-2.fc40.x86_64         libevdi-1.14.8-1.fc40.x86_64          
+  libusb1-1.0.27-6.fc40.x86_64           logrotate-3.21.0-6.fc40.x86_64        
+
+Complete!
++ akmods --force --kernels 6.12.11-100.fc40.x86_64 --kmod evdi
+grep: /boot/grub2/grubenv: No such file or directory
+Checking kmods exist for 6.12.11-100.fc40.x86_64 [  OK  ]
+Building and installing evdi-kmod [  OK  ]
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko.xz
++ rm -f /etc/yum.repos.d/negativo17-fedora-multimedia.repo
++ unset CFLAGS
+++ rpm -E %_arch
++ ARCH=x86_64
+++ rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}'
++ KERNEL=6.12.11-100.fc40.x86_64
+++ rpm -E %fedora
++ RELEASE=40
++ curl -LsSf -o /etc/yum.repos.d/_copr_gladion136-tuxedo-drivers-kmod.repo https://copr.fedorainfracloud.org/coprs/gladion136/tuxedo-drivers-kmod/repo/fedora-40/gladion136-tuxedo-drivers-kmod-fedora-40.repo
++ dnf install -y 'akmod-tuxedo-drivers-*.fc40.x86_64' 'kmod-tuxedo-drivers-*.fc40.x86_64'
+Copr repo for tuxedo-drivers-kmod owned by glad 2.3 kB/s | 1.5 kB     00:00    
+Dependencies resolved.
+==========================================================================================================================
+ Package                        Arch    Version       Repository                                                      Size
+==========================================================================================================================
+Installing:
+ akmod-tuxedo-drivers           x86_64  4.12.1-1.fc40 copr:copr.fedorainfracloud.org:gladion136:tuxedo-drivers-kmod   94 k
+ kmod-tuxedo-drivers            x86_64  4.12.1-1.fc40 copr:copr.fedorainfracloud.org:gladion136:tuxedo-drivers-kmod  7.2 k
+Installing dependencies:
+ tuxedo-drivers-kmod-common     x86_64  4.12.1-1.fc40 copr:copr.fedorainfracloud.org:gladion136:tuxedo-drivers-kmod   11 k
+
+Transaction Summary
+==========================================================================================================================
+Install  3 Packages
+
+Total download size: 112 k
+Installed size: 95 k
+Downloading Packages:
+(1/3): tuxedo-drivers-kmod-common-4.12.1-1.fc40  34 kB/s |  11 kB     00:00    
+(2/3): akmod-tuxedo-drivers-4.12.1-1.fc40.x86_6 267 kB/s |  94 kB     00:00    
+(3/3): kmod-tuxedo-drivers-4.12.1-1.fc40.x86_64  13 kB/s | 7.2 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           205 kB/s | 112 kB     00:00     
+Copr repo for tuxedo-drivers-kmod owned by glad  12 kB/s | 1.0 kB     00:00    
+Importing GPG key 0x5DA8AB66:
+ Userid     : "gladion136_tuxedo-drivers-kmod (None) <gladion136#tuxedo-drivers-kmod@copr.fedorahosted.org>"
+ Fingerprint: BD7E 9484 66AE 592C 2408 259E 3946 FFE2 5DA8 AB66
+ From       : https://download.copr.fedorainfracloud.org/results/gladion136/tuxedo-drivers-kmod/pubkey.gpg
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : tuxedo-drivers-kmod-common-4.12.1-1.fc40.x86_64        1/3 
+  Installing       : akmod-tuxedo-drivers-4.12.1-1.fc40.x86_64              2/3 
+  Running scriptlet: akmod-tuxedo-drivers-4.12.1-1.fc40.x86_64              2/3 
+  Installing       : kmod-tuxedo-drivers-4.12.1-1.fc40.x86_64               3/3 
+  Running scriptlet: akmod-tuxedo-drivers-4.12.1-1.fc40.x86_64              3/3 
+  Running scriptlet: kmod-tuxedo-drivers-4.12.1-1.fc40.x86_64               3/3 
+
+Installed:
+  akmod-tuxedo-drivers-4.12.1-1.fc40.x86_64                                     
+  kmod-tuxedo-drivers-4.12.1-1.fc40.x86_64                                      
+  tuxedo-drivers-kmod-common-4.12.1-1.fc40.x86_64                               
+
+Complete!
+Test1
++ echo Test1
++ akmods --force --kernels 6.12.11-100.fc40.x86_64 --kmod tuxedo-drivers
+grep: /boot/grub2/grubenv: No such file or directory
+Checking kmods exist for 6.12.11-100.fc40.x86_64 [  OK  ]
+Building and installing tuxedo-drivers-kmod [  OK  ]
+Test2
++ echo Test2
++ ls /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers -la
+total 208
+drwxr-xr-x. 2 root root  4096 Feb 14 18:12 .
+drwxr-xr-x. 5 root root  4096 Feb 14 18:12 ..
+-rw-r--r--. 1 root root  4480 Feb 14 18:12 clevo_acpi.ko.xz
+-rw-r--r--. 1 root root  4112 Feb 14 18:12 clevo_wmi.ko.xz
+-rw-r--r--. 1 root root  2020 Feb 14 18:12 gxtp7380.ko.xz
+-rw-r--r--. 1 root root  9144 Feb 14 18:12 ite_8291.ko.xz
+-rw-r--r--. 1 root root  5124 Feb 14 18:12 ite_8291_lb.ko.xz
+-rw-r--r--. 1 root root  4388 Feb 14 18:12 ite_8297.ko.xz
+-rw-r--r--. 1 root root  7696 Feb 14 18:12 ite_829x.ko.xz
+-rw-r--r--. 1 root root  5664 Feb 14 18:12 stk8321.ko.xz
+-rw-r--r--. 1 root root  1924 Feb 14 18:12 tuxedo_compatibility_check.ko.xz
+-rw-r--r--. 1 root root  7356 Feb 14 18:12 tuxedo_io.ko.xz
+-rw-r--r--. 1 root root 30432 Feb 14 18:12 tuxedo_keyboard.ko.xz
+-rw-r--r--. 1 root root  2848 Feb 14 18:12 tuxedo_nb02_nvidia_power_ctrl.ko.xz
+-rw-r--r--. 1 root root  3304 Feb 14 18:12 tuxedo_nb04_kbd_backlight.ko.xz
+-rw-r--r--. 1 root root  3364 Feb 14 18:12 tuxedo_nb04_keyboard.ko.xz
+-rw-r--r--. 1 root root  4232 Feb 14 18:12 tuxedo_nb04_power_profiles.ko.xz
+-rw-r--r--. 1 root root  3112 Feb 14 18:12 tuxedo_nb04_sensors.ko.xz
+-rw-r--r--. 1 root root  5328 Feb 14 18:12 tuxedo_nb04_wmi_ab.ko.xz
+-rw-r--r--. 1 root root  3464 Feb 14 18:12 tuxedo_nb04_wmi_bs.ko.xz
+-rw-r--r--. 1 root root  3648 Feb 14 18:12 tuxedo_nb05_ec.ko.xz
+-rw-r--r--. 1 root root  4444 Feb 14 18:12 tuxedo_nb05_fan_control.ko.xz
+-rw-r--r--. 1 root root  3184 Feb 14 18:12 tuxedo_nb05_kbd_backlight.ko.xz
+-rw-r--r--. 1 root root  3760 Feb 14 18:12 tuxedo_nb05_keyboard.ko.xz
+-rw-r--r--. 1 root root  5476 Feb 14 18:12 tuxedo_nb05_power_profiles.ko.xz
+-rw-r--r--. 1 root root  3212 Feb 14 18:12 tuxedo_nb05_sensors.ko.xz
+-rw-r--r--. 1 root root  4544 Feb 14 18:12 tuxedo_tuxi_fan_control.ko.xz
+-rw-r--r--. 1 root root  4548 Feb 14 18:12 tuxi_acpi.ko.xz
+-rw-r--r--. 1 root root  5392 Feb 14 18:12 uniwill_wmi.ko.xz
++ ls /var/cache/akmods/tuxedo-drivers/ -la
+total 736
+drwxr-xr-x. 2 root   root     4096 Feb 14 18:12 .
+drwxr-xr-x. 5 akmods akmods   4096 Feb 14 18:12 ..
+-rw-r--r--. 2 root   root   285398 Feb 14 18:12 .last.log
+-rw-r--r--. 2 root   root   285398 Feb 14 18:12 4.12.1-1-for-6.12.11-100.fc40.x86_64.log
+-rw-r--r--. 1 root   root   159133 Feb 14 18:12 kmod-tuxedo-drivers-6.12.11-100.fc40.x86_64-4.12.1-1.fc40.x86_64.rpm
+-rw-r--r--. 1 root   root    10883 Feb 14 18:12 tuxedo-drivers-kmod-4.12.1-1.fc40.x86_64.rpm
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko.xz
+Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko.xz
++ for file in /usr/lib/modules/${KERNEL}/extra/tuxedo-drivers/*.ko.xz
++ echo 'Processing /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko.xz'
++ modinfo /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko.xz
+Test4
++ echo Test4
++ rm -f /etc/yum.repos.d/_copr_gladion136-tuxedo-drivers-kmod.repo
+++ rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}'
++ KERNEL=6.12.11-100.fc40.x86_64
++ SIGNING_KEY_1=/tmp/certs/signing_key_1.pem
++ SIGNING_KEY_2=/tmp/certs/signing_key_2.pem
++ PUBLIC_CHAIN=/tmp/certs/public_key_chain.pem
++ [[ true == \t\r\u\e ]]
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko /tmp/certs/public_key_chain.pem
+Read 262226 bytes from module file
+Found magic number at 262226
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 262226 bytes from module file
+Found magic number at 262226
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/evdi/evdi.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko /tmp/certs/public_key_chain.pem
+Read 23722 bytes from module file
+Found magic number at 23722
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 23722 bytes from module file
+Found magic number at 23722
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_acpi.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko /tmp/certs/public_key_chain.pem
+Read 21986 bytes from module file
+Found magic number at 21986
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 21986 bytes from module file
+Found magic number at 21986
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/clevo_wmi.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko /tmp/certs/public_key_chain.pem
+Read 9882 bytes from module file
+Found magic number at 9882
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 9882 bytes from module file
+Found magic number at 9882
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/gxtp7380.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko /tmp/certs/public_key_chain.pem
+Read 54162 bytes from module file
+Found magic number at 54162
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 54162 bytes from module file
+Found magic number at 54162
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko /tmp/certs/public_key_chain.pem
+Read 24946 bytes from module file
+Found magic number at 24946
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 24946 bytes from module file
+Found magic number at 24946
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8291_lb.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko /tmp/certs/public_key_chain.pem
+Read 22850 bytes from module file
+Found magic number at 22850
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 22850 bytes from module file
+Found magic number at 22850
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_8297.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko /tmp/certs/public_key_chain.pem
+Read 46562 bytes from module file
+Found magic number at 46562
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 46562 bytes from module file
+Found magic number at 46562
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/ite_829x.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko /tmp/certs/public_key_chain.pem
+Read 28570 bytes from module file
+Found magic number at 28570
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 28570 bytes from module file
+Found magic number at 28570
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/stk8321.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko /tmp/certs/public_key_chain.pem
+Read 11026 bytes from module file
+Found magic number at 11026
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 11026 bytes from module file
+Found magic number at 11026
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_compatibility_check.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko /tmp/certs/public_key_chain.pem
+Read 38050 bytes from module file
+Found magic number at 38050
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 38050 bytes from module file
+Found magic number at 38050
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_io.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko /tmp/certs/public_key_chain.pem
+Read 226626 bytes from module file
+Found magic number at 226626
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 226626 bytes from module file
+Found magic number at 226626
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_keyboard.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko /tmp/certs/public_key_chain.pem
+Read 12922 bytes from module file
+Found magic number at 12922
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 12922 bytes from module file
+Found magic number at 12922
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb02_nvidia_power_ctrl.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko /tmp/certs/public_key_chain.pem
+Read 16466 bytes from module file
+Found magic number at 16466
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 16466 bytes from module file
+Found magic number at 16466
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_kbd_backlight.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko /tmp/certs/public_key_chain.pem
+Read 16858 bytes from module file
+Found magic number at 16858
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 16858 bytes from module file
+Found magic number at 16858
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_keyboard.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko /tmp/certs/public_key_chain.pem
+Read 20842 bytes from module file
+Found magic number at 20842
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 20842 bytes from module file
+Found magic number at 20842
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_power_profiles.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko /tmp/certs/public_key_chain.pem
+Read 14162 bytes from module file
+Found magic number at 14162
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 14162 bytes from module file
+Found magic number at 14162
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_sensors.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko /tmp/certs/public_key_chain.pem
+Read 30722 bytes from module file
+Found magic number at 30722
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 30722 bytes from module file
+Found magic number at 30722
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_ab.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko /tmp/certs/public_key_chain.pem
+Read 16970 bytes from module file
+Found magic number at 16970
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 16970 bytes from module file
+Found magic number at 16970
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb04_wmi_bs.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko /tmp/certs/public_key_chain.pem
+Read 19898 bytes from module file
+Found magic number at 19898
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 19898 bytes from module file
+Found magic number at 19898
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_ec.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko /tmp/certs/public_key_chain.pem
+Read 22818 bytes from module file
+Found magic number at 22818
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 22818 bytes from module file
+Found magic number at 22818
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_fan_control.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko /tmp/certs/public_key_chain.pem
+Read 15506 bytes from module file
+Found magic number at 15506
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 15506 bytes from module file
+Found magic number at 15506
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_kbd_backlight.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko /tmp/certs/public_key_chain.pem
+Read 18770 bytes from module file
+Found magic number at 18770
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 18770 bytes from module file
+Found magic number at 18770
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_keyboard.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko /tmp/certs/public_key_chain.pem
+Read 28322 bytes from module file
+Found magic number at 28322
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 28322 bytes from module file
+Found magic number at 28322
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_power_profiles.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko /tmp/certs/public_key_chain.pem
+Read 14730 bytes from module file
+Found magic number at 14730
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 14730 bytes from module file
+Found magic number at 14730
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_nb05_sensors.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko /tmp/certs/public_key_chain.pem
+Read 24762 bytes from module file
+Found magic number at 24762
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 24762 bytes from module file
+Found magic number at 24762
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxedo_tuxi_fan_control.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko /tmp/certs/public_key_chain.pem
+Read 25874 bytes from module file
+Found magic number at 25874
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 25874 bytes from module file
+Found magic number at 25874
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/tuxi_acpi.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko /tmp/certs/public_key_chain.pem
+Read 28266 bytes from module file
+Found magic number at 28266
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 28266 bytes from module file
+Found magic number at 28266
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/tuxedo-drivers/uniwill_wmi.ko
++ for module in /usr/lib/modules/"${KERNEL}"/extra/*/*.ko*
++ module_basename=/usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko
++ module_suffix=.xz
++ [[ .xz == \.\x\z ]]
++ xz --decompress /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko.xz
++ openssl cms -sign -signer /tmp/certs/signing_key_1.pem -signer /tmp/certs/signing_key_2.pem -binary -in /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko -outform DER -out /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko.cms -nocerts -noattr -nosmimecap
++ /usr/src/kernels/6.12.11-100.fc40.x86_64/scripts/sign-file -s /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko.cms sha256 /tmp/certs/public_key_chain.pem /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko
++ /tmp/dual-sign-check.sh 6.12.11-100.fc40.x86_64 /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko /tmp/certs/public_key_chain.pem
+Read 24514 bytes from module file
+Found magic number at 24514
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+Read 24514 bytes from module file
+Found magic number at 24514
+Found PKCS#7/CMS encapsulation
+Found 805 bytes of signature [3082032106092a864886f70d010702a0]
+CMS Verification successful
+Signature Verified for /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko
++ xz -f /usr/lib/modules/6.12.11-100.fc40.x86_64/extra/zenergy/zenergy.ko
++ find /var/cache/akmods -type f -name '\kmod-*.rpm'
+/var/cache/akmods/tuxedo-drivers/kmod-tuxedo-drivers-6.12.11-100.fc40.x86_64-4.12.1-1.fc40.x86_64.rpm
+/var/cache/akmods/evdi/kmod-evdi-6.12.11-100.fc40.x86_64-1.14.8-2.fc40.x86_64.rpm
+/var/cache/akmods/zenergy/kmod-zenergy-6.12.11-100.fc40.x86_64-0.0.git.36.32f6eb3d-1.fc40.x86_64.rpm
+++ find /var/cache/akmods/ -type f -name 'kmod-*.rpm'
++ for RPM in $(find /var/cache/akmods/ -type f -name \kmod-*.rpm)
++ mkdir -p /tmp/buildroot
++ cp -r /usr /lib /tmp/buildroot
++ rpmrebuild --additional=--buildroot=/tmp/buildroot --batch /var/cache/akmods/tuxedo-drivers/kmod-tuxedo-drivers-6.12.11-100.fc40.x86_64-4.12.1-1.fc40.x86_64.rpm
+(GenRpmQf) remove tag line ENHANCESFLAGS
+(GenRpmQf) remove tag line ENHANCESNAME
+(GenRpmQf) remove tag line ENHANCESVERSION
+(GenRpmQf) remove tag line SUGGESTSFLAGS
+(GenRpmQf) remove tag line SUGGESTSNAME
+(GenRpmQf) remove tag line SUGGESTSVERSION
+/usr/lib/rpmrebuild/rpmrebuild.sh: ERROR: (IsPackageInstalled) /var/cache/akmods/tuxedo-drivers/kmod-tuxedo-drivers-6.12.11-100.fc40.x86_64-4.12.1-1.fc40.x86_64.rpm package is not installed
+Error: building at STEP "RUN --mount=type=cache,dst=/var/cache/dnf /tmp/build-prep.sh &&     if grep -qv "surface" <<< "${KERNEL_FLAVOR}"; then         export KERNEL_NAME="kernel"     ; else         export KERNEL_NAME="kernel-surface"     ; fi &&     if grep -qv "asus" <<< "${KERNEL_FLAVOR}"; then         /tmp/build-kmod-zenergy.sh &&         /tmp/build-kmod-evdi.sh     ; fi &&     /tmp/build-kmod-tuxedo-drivers.sh &&     /tmp/dual-sign.sh &&     for RPM in $(find /var/cache/akmods/ -type f -name \*.rpm); do         cp "${RPM}" /var/cache/rpms/kmods/;     done &&     for RPM in $(find /root/rpmbuild/RPMS/"$(uname -m)"/ -type f -name \*.rpm); do         cp "${RPM}" /var/cache/rpms/kmods/;     done &&     find /var/cache/rpms": while running runtime: exit status 1
